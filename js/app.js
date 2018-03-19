@@ -19,7 +19,7 @@ var basedata = {
 
 };
 /**
- * 事件绑定
+ * 事件绑定 --- (这里面写的是点击方法等方法)
  */
 var evenbind = function () {
 
@@ -31,11 +31,9 @@ var evenbind = function () {
 var init_application = function () {
     // 事件绑定
     evenbind();
-
     // 风险评估 完成率饼图
     basedata.echarts_pie = new EchartsDemo("demo", "接口描述", "接口地址");
     basedata.echarts_pie.render_echart();
-
     /**
      * 图表自适应
      */

@@ -168,7 +168,7 @@ ul, li, ol {list-style: none;}
  <div class="ry-loading">
         <div class="ry-icon">
             <svg class="icon" aria-hidden="true">
-                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-weixin"></use>
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-momoda"></use>
             </svg>
         </div>
         <span class="ry-text">加载中...</span>
@@ -277,6 +277,7 @@ ul, li, ol {list-style: none;}
 .font-24 {font-size: 26px;}
 .font-28 {font-size: 32px;}
 .font-32 {font-size: 34px;}
+.font-42 {font-size: 42px;}
 
 /* 字体颜色 */
 .co-white {color: #fff;}
@@ -291,7 +292,19 @@ ul, li, ol {list-style: none;}
 .co-green{color: #33ff00;}
 .co-red{color: #ff3366;}
 .co-blue-menu{color: #5180cf;}
-
+.co-blur-ff1{color: #01fff1;}
+.co-blue-efe{color: #008efe;}
+.co-blue-cde{color: #2cdcde;}
+.co-green-961{color: #9cd961;}
+.co-green-fa2{color: #00ffa2;}
+.co-orange-b5a{color: #ffcb5a;}
+.bg-orange-b5a{background-color: rgba(255,203,90,1);}/*背景颜色*/
+.bg-blue-efe{background-color: rgba(0,142,254,1);}
+.bg-blur-ff1{ background-color: rgba(1,255,241,1);}
+.bg-orange-b5a-3{background-color: rgba(255,203,90,.3);}
+.bg-blue-efe-3{background-color: rgba(0,142,254,.3);}
+.bg-blue-ff1-3{ background-color: rgba(1,255,241,.3);}
+.co-blue-961-3{background-color: rgba(156,217,97,.3);}
 /* 背景颜色 */
 .cobg-pink{background-color: #ff3366;}
 
@@ -300,12 +313,13 @@ ul, li, ol {list-style: none;}
 @media screen and (max-width: 1439px) {
   .font-12 {font-size: 12px;}
   .font-14 {font-size: 14px;}
-  .font-16 {font-size: 16px;}
+  .font-16 {font-size: 12px;}
   .font-18 {font-size: 18px;}
   .font-20 {font-size: 20px;}
-  .font-24 {font-size: 24px;}
+  .font-24 {font-size: 18px;}
   .font-28 {font-size: 26px;}
   .font-32 {font-size: 32px;}
+  .font-42 {font-size: 24px;}
   .ry-loading > .ry-icon > .icon {width: 40px; height: 40px;}
   .ry-loading > .ry-icon {height: 56px;}
   .ry-loading > .ry-text {font-size: 14px;}
