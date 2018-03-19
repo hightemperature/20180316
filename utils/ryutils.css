@@ -282,6 +282,9 @@ ul, li, ol {list-style: none;}
 .font-28 {font-size: 32px;}
 .font-32 {font-size: 34px;}
 .font-42 {font-size: 42px;}
+.font-46 {font-size: 36px;}
+.font-76 {font-size: 48px;}
+
 
 /* 字体颜色 */
 .co-white {color: #fff;}
@@ -329,14 +332,16 @@ ul, li, ol {list-style: none;}
 }
 @media screen and (max-width: 1439px) {
   .font-12 {font-size: 12px;}
-  .font-14 {font-size: 14px;}
+  .font-14 {font-size: 12px;}
   .font-16 {font-size: 12px;}
-  .font-18 {font-size: 18px;}
+  .font-18 {font-size: 16px;}
   .font-20 {font-size: 12px;}
   .font-24 {font-size: 18px;}
   .font-28 {font-size: 26px;}
   .font-32 {font-size: 20px;}
   .font-42 {font-size: 24px;}
+  .font-46 {font-size: 28px;}
+  .font-76 {font-size: 36px;}
   .ry-loading > .ry-icon > .icon {width: 40px; height: 40px;}
   .ry-loading > .ry-icon {height: 56px;}
   .ry-loading > .ry-text {font-size: 14px;}
@@ -347,5 +352,19 @@ ul, li, ol {list-style: none;}
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0);
+  }
+  .center-paybox a > i {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+  }
+  .center-paybox svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .number-por {
+    line-height: 1.2;
   }
 }

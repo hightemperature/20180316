@@ -6,8 +6,7 @@ var config = {
     /**
      * 接口
      */
-    inter_: {
-    },
+    inter_inter: "http://39.108.4.49/connector/monitor/qryWeekOrderCount",
     /**
      * 定时器
      */

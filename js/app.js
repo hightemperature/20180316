@@ -32,7 +32,7 @@ var init_application = function () {
     // 事件绑定
     evenbind();
     // 风险评估 完成率饼图
-    basedata.echarts_pie = new EchartsDemo("demo", "接口描述", "接口地址");
+    basedata.echarts_pie = new EchartsDemo("zhifubaolist", "接口描述", "接口地址");
     basedata.echarts_pie.render_echart();
     /**
      * 图表自适应
@@ -57,13 +57,15 @@ var init_application = function () {
  */
 function EchartsDemo(dom_id, url_desc, url) {
     this.dom_id = dom_id;
-    this.url_desc = url_desc;
-    this.url = url;
+    this.url_desc = "inter-接口";
+    this.url = config.inter_inter;
 
     // 图表实例
     this.myChart = null;
     // 图表配置
-    this.option = {};
+    this.option = {
+
+    };
     // 是否初始化渲染图表
     this.load_first = true;
 }
@@ -86,12 +88,13 @@ EchartsDemo.prototype = {
             successfn: function (resp) {
 
                 // 业务逻辑处理
-
+                console.info(resp.result)
 
                 // 是否已经初始化echarts实例
                 if(_self.load_first){
                     _self.myChart = echarts.init(document.getElementById(_self.dom_id));
                     _self.load_first = false;
+                    console.info(1)
                 }
                 // 渲染图表
                 _self.myChart.setOption(_self.option);

@@ -7,6 +7,7 @@ html,body{
 }
 /*整体开始*/
 .oper-container {
+    overflow: hidden;
     width: 100%;
     height: 100%;
     min-width: 1023px;
@@ -71,11 +72,14 @@ html,body{
 }
 /*内容*/
 .oper-c-content {
-    width: 100%;
+    width: 98%;
     height: 92%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 /*左边用户分析&&渠道分析*/
 .c-left-user {
+    overflow: hidden;
     position: relative;
     width: 25%;
     height: 100%;
@@ -105,7 +109,7 @@ html,body{
 }
 /*渠道分析内容*/
 .tren-cont {
-    display: none;
+    /*display: none;*/
     height: 100%;
     text-align: center;
 }
@@ -164,14 +168,8 @@ html,body{
 }
 /*图表*/
 .use-listbox {
-    position: absolute;
-    z-index: 999;
-    top: 0;
-    left: 0;
     display:  flex;
     justify-content: space-between;
-    width: 100%;
-    height: 100%;
     text-align: center;
 }
 .use-listbox > div {
@@ -214,14 +212,6 @@ html,body{
 .trench-busi-cont{
     width: 100%;
     height: 80%;
-}
-.trench-listbox {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
 }
 .trench-list {
     width: 38%;
@@ -325,7 +315,7 @@ html,body{
  */
 /*用户分析*/
 .user-cont {
-    /*display: none;*/
+    display: none;
     width: 100%;
     height: 100%;
 }
@@ -367,14 +357,61 @@ html,body{
     height: 90%;
 }
 .sector-listbox {
+    position: relative;
     width: 100%;
     height: 49%;
+}
+.sector-dia {
+    width: 50%;
+    height: 100%;
+}
+.number-por {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 50%;
+    line-height: 2;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.number-por span {
+    color: #00ffa2;
+    padding-left: 6%;
 }
 .sector-listboxtwo {
+    position: relative;
     width: 100%;
     height: 49%;
 }
-/*新增用户趋势分析*/
+.age-distri {
+    position: relative;
+    width: 60%;
+    height: 100%;
+}
+.age-positionbox {
+    width: 100%;
+    padding-left: 20%;
+}
+.age-positionbox > p {
+    float: left;
+    display: inline-block;
+    width: 50%;
+}
+.age-positionbox > p {
+    display: flex;
+    justify-content: space-between;
+}
+.agelist {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: 100%;
+}
+    /*新增用户趋势分析*/
 .increase-user {
     width: 100%;
     height: 27%;
@@ -410,6 +447,113 @@ html,body{
     /*background-position: center center;*/
     /*background-size: 100% 100%;*/
 }
+/*用户注册数文字*/
+.regis-user {
+    text-align: center;
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
+    cursor: pointer;
+}
+/*支微交官数据*/
+.center-paybox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 8%;
+    margin-top: 6%;
+}
+.center-paybox > div {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    background-image: url("../images/inter-centerbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+    text-align: center;
+}
+.center-paybox a {
+    width: 100%;
+}
+.center-paybox a > i {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 2%;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    line-height: 40px;
+}
+.center-paybox svg {
+    width: 40px;
+    height: 40px;
+    margin-right: 2%;
+    fill: currentColor;
+    vertical-align: middle;
+}
+.z-data > span {
+    vertical-align: middle;
+
+}
+/*炫酷动画*/
+.animation-bg {
+    position: relative;
+    width: 96%;
+    height: 78%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    background-image: url("../images/inter-centerver.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.animation-bg > p {
+    display: flex;
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    z-index: 10;
+    width: 96%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.number-myriad {
+    display: flex;
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    z-index: 10;
+    width: 96%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+/*累计用户总数&&累计业务办理量*/
+.animation-onewrite{
+    top: 7%;
+}
+.number-one {
+    top: 15%;
+}
+/*累计使用率&&今日新增用户*/
+.animation-twowrite{
+    top: 40%;
+}
+.number-two {
+    top: 47%;
+}
+/*网上业务服务数量&&在线用户数量*/
+.animation-threewrite{
+    bottom: 19%;
+}
+.number-three {
+    bottom: 8%;
+}
+/**/
 /**
 * 公共的背景边框
 */
@@ -429,4 +573,9 @@ html,body{
     z-index: 999;
     width: 100%;
     height: 100%;
+}
+/*字体粗体*/
+.font-wei { font-weight: bold;}
+.font-wei > em {
+    font-weight: lighter;
 }

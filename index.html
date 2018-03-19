@@ -13,8 +13,8 @@
 
     <!-- 千赞CSS -->
     <link rel="stylesheet" href="utils/yer/yer.min.css">            <!-- 提示 -->
-    <link rel="stylesheet" href="utils/ryutils.css">                <!-- 工具 -->
     <link rel="stylesheet" href="css/app.css">                      <!-- 业务 -->
+    <link rel="stylesheet" href="utils/ryutils.css">                <!-- 工具 -->
 </head>
 <body>
     <svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;">
@@ -66,18 +66,18 @@
                                     <i class="ang-icon-bl"></i>
                                 </div>
                                 <!-- 图表 -->
-                                <div class="use-listbox">
+                                <div class="use-listbox public-list">
                                     <!-- 支付宝 -->
-                                    <div class="zhifubao-list">
+                                    <div class="zhifubao-list" id="zhifubaolist">
                                     </div>
                                     <!-- 微信 -->
-                                    <div class="weixin-list">
+                                    <div class="weixin-list" id="zhifubaolist">
                                     </div>
                                     <!-- 12123 -->
-                                    <div class="number-list">
+                                    <div class="number-list" id="zhifubaolist">
                                     </div>
                                     <!-- 官网 -->
-                                    <div class="auth-list">
+                                    <div class="auth-list" id="zhifubaolist">
                                     </div>
                                 </div>
                             </div>
@@ -109,7 +109,7 @@
                                     <i class="ang-icon-bl"></i>
                                 </div>
                                 <!--图表-->
-                                <div class="trench-listbox clearfix">
+                                <div class="trench-listbox public-list clearfix">
                                     <!-- 图表 -->
                                     <div class="trench-list fl" id="trenchlit"></div>
                                     <!-- 占比文字 -->
@@ -204,11 +204,11 @@
                                         <i class="ang-icon-bl"></i>
                                     </div>
                                     <!-- 图表 -->
-                                    <div class="sector-list">
-                                        <div class="sector-dia" id="sector-dia"></div>
-                                        <div class="number-por">
-                                            <p>个体用户注册数<span id="div-number">2540</span></p>
-                                            <p>集体用户注册数<span id="coll-pro">42.2%</span></p>
+                                    <div class="sector-list public-list clearfix">
+                                        <div class="sector-dia fl" id="sector-dia"></div>
+                                        <div class="number-por fr">
+                                            <p class="co-white font-14">个体用户注册数<span class="font-24" id="div-number">2540</span></p>
+                                            <p class="co-white font-14">集体用户注册数<span class="font-24" id="coll-pro">42.2%</span></p>
                                         </div>
                                     </div>
                                 </div>
@@ -220,6 +220,21 @@
                                         <i class="ang-icon-tr"></i>
                                         <i class="ang-icon-br"></i>
                                         <i class="ang-icon-bl"></i>
+                                    </div>
+                                    <!-- 图表 -->
+                                    <div class="age-listbox public-list">
+                                        <!-- 年龄分布 -->
+                                        <div class="age-distri ">
+                                            <div class="age-positionbox clearfix malign-center">
+                                                <p class="co-white font-14"><span>20岁以下</span><span class="font-24 co-green-fa2 font-wei">20%</span></p>
+                                                <p class="co-white font-14"><span>40岁-50岁</span><span class="font-24 co-green-fa2 font-wei">20%</span></p>
+                                                <p class="co-white font-14"><span>20岁-30岁</span><span class="font-24 co-green-fa2 font-wei">20%</span></p>
+                                                <p class="co-white font-14"><span>50岁以上</span><span class="font-24 co-green-fa2 font-wei">20%</span></p>
+                                                <p class="co-white font-14"><span>30-40岁</span><span class="font-24 co-green-fa2 font-wei">20%</span></p>
+                                            </div>
+                                        </div>
+                                        <!-- 年龄图表 -->
+                                        <div class="agelist" id="agelist"></div>
                                     </div>
                                 </div>
                             </div>
@@ -269,7 +284,64 @@
                 </div>
             </div>
             <!-- 中间注册用户数 -->
-            <div class="c-center-usernumber"></div>
+            <div class="c-center-usernumber">
+                <!-- 中间头部 -->
+                <div class="regis-user"><span class="co-white font-32">注册用户数</span></div>
+                <!-- 支付显示 -->
+                <div class="center-paybox">
+                    <div class="z-data">
+                        <a class="malign-center" href="javascript:void(0)">
+                            <svg class="icon co-blue-efe" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-zhifubaotubiao"></use>
+                            </svg>
+                            <span class="co-blue-efe">123456</span>
+                        </a>
+                    </div>
+                    <div class="c-data">
+                        <a class="malign-center " href="javascript:void(0)">
+                            <svg class="icon co-green-961" aria-hidden="true">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-weixin"></use>
+                            </svg>
+                            <span class="co-green-961">123456</span>
+                        </a>
+                    </div>
+                    <div class="j-data">
+                        <a class="malign-center" href="javascript:void(0)">
+                            <i class="co-blue-ff1">交</i>
+                            <span class="co-blue-ff1">123456</span>
+                        </a>
+                    </div>
+                    <div class="g-data">
+                        <a class="malign-center" href="javascript:void(0)">
+                            <i class="co-orange-b5a">官</i>
+                            <span class="co-orange-b5a">123456</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- 炫酷动画 -->
+                <div class="animation-bg">
+                    <!-- 累计用户总数&&累计业务办理量 -->
+                    <p class="animation-onewrite co-white font-32"><span>累计用户总数</span><span>累计业务办理量</span></p>
+                    <div class="number-one number-myriad">
+                        <span class="font-76 co-blue-ff1 font-wei">471.92<em class="font-46">万</em></span>
+                        <span class="font-76 co-blue-ff1 font-wei">1612.63<em class="font-46">万</em></span>
+                    </div>
+                    <!-- 累计使用率&&今日新增用户 -->
+                    <p class="animation-twowrite co-white font-32"><span>累计使用率</span><span>今日新增用户</span></p>
+                    <div class="number-two number-myriad">
+                        <span class="font-76 co-blue-ff1 font-wei">98<em class="font-46">%</em></span>
+                        <span class="font-76 co-blue-ff1 font-wei">157<em class="font-46">个</em></span>
+                    </div>
+                    <!-- 网上业务服务数量&&在线用户数量 -->
+                    <p class="animation-threewrite co-white font-32"><span>网上业务服务数量</span><span>在线用户数量</span></p>
+                    <div class="number-three number-myriad">
+                        <span class="font-76 co-blue-ff1 font-wei">64<em class="font-46">个</em></span>
+                        <span class="font-76 co-blue-ff1 font-wei">4<em class="font-46">个</em></span>
+                    </div>
+                    <!-- 超炫动画 -->
+                    <div class="ball-rotation"></div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- 三方JS -->
