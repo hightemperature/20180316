@@ -59,6 +59,10 @@ a {text-decoration: none;}
 a img {border: 0;}
 
 /**
+  * i,em,cite,address 将斜体扶正
+  */
+address, cite, em, i { font-style: normal; }
+/**
  * 无序列表
 */
 ul, li, ol {list-style: none;}
@@ -273,7 +277,7 @@ ul, li, ol {list-style: none;}
 .font-14 {font-size: 16px;}
 .font-16 {font-size: 18px;}
 .font-18 {font-size: 20px;}
-.font-20 {font-size: 22px;}
+.font-20 {font-size: 20px;}
 .font-24 {font-size: 26px;}
 .font-28 {font-size: 32px;}
 .font-32 {font-size: 34px;}
@@ -292,7 +296,7 @@ ul, li, ol {list-style: none;}
 .co-green{color: #33ff00;}
 .co-red{color: #ff3366;}
 .co-blue-menu{color: #5180cf;}
-.co-blur-ff1{color: #01fff1;}
+.co-blue-ff1{color: #01fff1;}
 .co-blue-efe{color: #008efe;}
 .co-blue-cde{color: #2cdcde;}
 .co-green-961{color: #9cd961;}
@@ -309,18 +313,39 @@ ul, li, ol {list-style: none;}
 .cobg-pink{background-color: #ff3366;}
 
 
-
+@media screen and (max-width: 1640px) {
+  .font-12 {font-size: 12px;}
+  .font-14 {font-size: 14px;}
+  .font-16 {font-size: 16px;}
+  .font-18 {font-size: 16px;}
+  .font-20 {font-size: 16px;}
+  .font-24 {font-size: 18px;}
+  .font-28 {font-size: 18px;}
+  .font-32 {font-size: 24px;}
+  .font-42 {font-size: 32px;}
+  .ry-loading > .ry-icon > .icon {width: 40px; height: 40px;}
+  .ry-loading > .ry-icon {height: 56px;}
+  .ry-loading > .ry-text {font-size: 14px;}
+}
 @media screen and (max-width: 1439px) {
   .font-12 {font-size: 12px;}
   .font-14 {font-size: 14px;}
   .font-16 {font-size: 12px;}
   .font-18 {font-size: 18px;}
-  .font-20 {font-size: 20px;}
+  .font-20 {font-size: 12px;}
   .font-24 {font-size: 18px;}
   .font-28 {font-size: 26px;}
-  .font-32 {font-size: 32px;}
+  .font-32 {font-size: 20px;}
   .font-42 {font-size: 24px;}
   .ry-loading > .ry-icon > .icon {width: 40px; height: 40px;}
   .ry-loading > .ry-icon {height: 56px;}
   .ry-loading > .ry-text {font-size: 14px;}
+  .pro-write > li > a {
+    line-height: .5;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
 }

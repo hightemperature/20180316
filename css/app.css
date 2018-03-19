@@ -73,14 +73,324 @@ html,body{
 .oper-c-content {
     width: 100%;
     height: 92%;
-    border: 1px solid red;
 }
 /*左边用户分析&&渠道分析*/
 .c-left-user {
+    position: relative;
     width: 25%;
     height: 100%;
-    border: 1px solid black;
-    box-sizing: border-box;
+}
+.c-headcont {
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
+}
+.c-headcont > a {
+    padding-left: 10%;
+    border-left: 4px solid #fff;
+    cursor: pointer;
+}
+.c-headcont > a.active {
+    color: #01fff1;
+}
+.c-hc-write1 {
+    margin-right: 5%;
+}
+/*渠道分析内容切换内容*/
+.c-cutcontent {
+    margin-top: 7%;
+    height: 93%;
+}
+/*渠道分析内容*/
+.tren-cont {
+    display: none;
+    height: 100%;
+    text-align: center;
+}
+/*各渠道使用情况*/
+.trench-use-box {
+    width: 100%;
+    height: 20%;
+    margin-bottom: 1%;
+    padding-top: 3%;
+}
+.trench-use-header {
+    position: relative;
+    width: 50%;
+    height: 18%;
+    background-image: url("../images/inter-leftbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.trench-use-cont {
+    width: 100%;
+    height: 80%;
+}
+.angle-icon {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+.angle-icon > i {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/inter-angle.png");
+    background-repeat: no-repeat;
+}
+.ang-icon-tl {
+    top: -2px;
+    left: -2px;
+    background-position: top left;
+}
+.ang-icon-tr {
+    top: -2px;
+    right: -2px;
+    background-position: top right;
+}
+.ang-icon-br {
+    bottom: -2px;
+    left: -2px;
+    background-position: bottom left;
+}
+.ang-icon-bl {
+    bottom: -2px;
+    right: -2px;
+    background-position: bottom right;
+}
+/*图表*/
+.use-listbox {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display:  flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.use-listbox > div {
+    width: 25%;
+}
+/*各渠道新增用户数量*/
+.trench-user-box {
+    width: 100%;
+    height: 30%;
+    margin-bottom: 1%;
+}
+.trench-user-header {
+    position: relative;
+    width: 50%;
+    height: 13%;
+    background-image: url("../images/inter-leftbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.trench-user-cont {
+    width: 100%;
+    height: 81%;
+}
+/*各渠道累计办理业务占比*/
+.trench-busi-box{
+    width: 100%;
+    height: 20%;
+    margin-bottom: 1%;
+}
+.trench-busi-header {
+    position: relative;
+    width: 50%;
+    height: 18%;
+    background-image: url("../images/inter-leftbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.trench-busi-cont{
+    width: 100%;
+    height: 80%;
+}
+.trench-listbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+}
+.trench-list {
+    width: 38%;
+    height: 100%;
+}
+.pro-write {
+    width: 60%;
+    height: 100%;
+}
+.pro-write > li {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 50%;
+}
+.pro-w-flex .icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    color: #00ff94;
+    vertical-align: middle;
+}
+.pro-w-flex p {
+    display: inline;
+    vertical-align: middle;
+}
+.pro-w-flex p > span {
+    color: #00ffa2;
+    font-weight: bold;
+}
+.pro-write > li > a {
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
+    width: 50%;
+    height: 50%;
+}
+.pro-w-nodafult i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #00ff94;
+    color: #00ff94;
+    font-size: 12px;
+    line-height: 16px;
+}
+.pro-w-nodafult p {
+    display: inline;
+}
+.pro-w-nodafult p > span {
+    color: #00ffa2;
+    font-weight: bold;
+}
+    /*各渠道办理业务统计*/
+.trench-sum-box{
+    position: relative;
+    width: 100%;
+    height: 26%;
+}
+.trench-sum-header {
+    position: relative;
+    width: 50%;
+    height: 14%;
+    background-image: url("../images/inter-leftbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.trench-sum-cont {
+    width: 100%;
+    height: 84%;
+}
+/*日周月*/
+.trench-mouth {
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    width: 100%;
+    text-align: right;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.trench-mouth > a {
+    color: #fff;
+}
+.trench-mouth > a > i {
+    display: inline-block;
+    width: 2px;
+    height: 10px;
+    margin-right: 2%;
+    background-color: #fff;
+}
+/**
+ * 用户分析页面
+ */
+/*用户分析*/
+.user-cont {
+    /*display: none;*/
+    width: 100%;
+    height: 100%;
+}
+/*使用人数对比*/
+.thenumuser-compar {
+    width: 100%;
+    height: 30%;
+    padding-top: 3%;
+}
+.then-com-header {
+    position: relative;
+    width: 50%;
+    height: 13%;
+    background-image: url("../images/inter-leftbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.then-com-cont {
+    width: 100%;
+    height: 85%;
+}
+/*人员类型分析*/
+.person-ana {
+    width: 100%;
+    height: 40%;
+}
+.per-ana-header {
+    position: relative;
+    width: 50%;
+    height: 9%;
+    background-image: url("../images/inter-leftbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.per-ana-cont {
+    width: 100%;
+    height: 90%;
+}
+.sector-listbox {
+    width: 100%;
+    height: 49%;
+}
+.sector-listboxtwo {
+    width: 100%;
+    height: 49%;
+}
+/*新增用户趋势分析*/
+.increase-user {
+    width: 100%;
+    height: 27%;
+}
+.incr-user-header {
+    position: relative;
+    width: 50%;
+    height: 13.6%;
+    background-image: url("../images/inter-leftbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.incr-user-cont {
+    width: 100%;
+    height: 86.6%;
 }
 /*右边交通管理&&业务情况*/
 .c-right-traf {
@@ -88,4 +398,35 @@ html,body{
     height: 100%;
     border: 1px solid black;
     box-sizing: border-box;
+}
+/*中间*/
+.c-center-usernumber {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    height: 100%;
+    /*background-image: url("../images/inter-centerver.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center center;*/
+    /*background-size: 100% 100%;*/
+}
+/**
+* 公共的背景边框
+*/
+.public-bordershadow {
+    position: relative;
+    margin-top: 1%;
+    border: 2px solid #2388ed;
+    box-sizing: border-box;
+    -webkit-box-shadow: inset 0 0px 40px rgba(16, 96, 228, .6);
+    -moz-box-shadow: inset 0 0px 40px rgba(16, 96, 228, .6);
+    box-shadow: inset 0 0px 40px rgba(16, 96, 228, .6);
+}
+.public-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
 }
