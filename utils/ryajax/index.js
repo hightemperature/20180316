@@ -15,7 +15,7 @@
         //  接口状态CODE
         STATE: {
             NAME: "result",
-            SUCVAL: 0
+            SUCVAL: true
         },
         // 接口状态信息
         MESSAGE: "msg",

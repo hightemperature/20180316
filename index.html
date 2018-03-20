@@ -46,14 +46,14 @@
             <!-- 左边用户分析&&渠道分析 -->
             <div class="c-left-user fl">
                 <!-- 用户分析&&渠道分析切换标题 -->
-                <div class="c-headcont">
+                <div class="c-headcont" id="cutleft">
                     <a class="c-hc-write1 font-32 co-white" href="javascript:void(0)">渠道分析</a>
                     <a class="c-hc-write2 font-32 co-white" href="javascript:void(0)">用户分析</a>
                 </div>
                 <!-- 用户分析&&渠道分析切换内容 -->
-                <div class="c-cutcontent">
+                <div class="c-cutcontent" id="contleft">
                     <!-- 渠道分析内容 -->
-                    <div class="tren-cont">
+                    <div class="tren-cont public-l-cont">
                         <!-- 各渠道使用情况 -->
                         <div class="trench-use-box">
                             <div class="trench-use-header"><span class="co-blue-ff1 font-20 text-overflow-e malign-center-text">各渠道使用情况</span></div>
@@ -146,7 +146,7 @@
                         <div class="trench-sum-box">
                             <div class="trench-sum-header">
                                 <span class="co-blue-ff1 font-20 text-overflow-e malign-center-text">各渠道办理业务统计</span>
-                                <div class="trench-mouth">
+                                <div class="trench-mouth" id="trenmouth">
                                     <a href="javascript:void(0)">日</a>
                                     <a href="javascript:void(0)"><i></i>周</a>
                                     <a href="javascript:void(0)"><i></i>月</a>
@@ -166,12 +166,12 @@
                         </div>
                     </div>
                     <!-- 用户分析 -->
-                    <div class="user-cont">
+                    <div class="user-cont public-l-cont">
                         <!-- 使用人数对比 -->
                         <div class="thenumuser-compar">
                             <div class="then-com-header">
                                 <span class="co-blue-ff1 font-20 text-overflow-e malign-center-text">使用人数对比</span>
-                                <div class="trench-mouth">
+                                <div class="trench-mouth" id="thenmouth">
                                     <a href="javascript:void(0)">日</a>
                                     <a href="javascript:void(0)"><i></i>周</a>
                                     <a href="javascript:void(0)"><i></i>月</a>
@@ -294,7 +294,7 @@
                             <svg class="icon co-blue-efe" aria-hidden="true">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-zhifubaotubiao"></use>
                             </svg>
-                            <span class="co-blue-efe">123456</span>
+                            <span class="co-blue-efe font-wei">123456</span>
                         </a>
                     </div>
                     <div class="c-data">
@@ -302,19 +302,19 @@
                             <svg class="icon co-green-961" aria-hidden="true">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-weixin"></use>
                             </svg>
-                            <span class="co-green-961">123456</span>
+                            <span class="co-green-961 font-wei">123456</span>
                         </a>
                     </div>
                     <div class="j-data">
                         <a class="malign-center" href="javascript:void(0)">
                             <i class="co-blue-ff1">交</i>
-                            <span class="co-blue-ff1">123456</span>
+                            <span class="co-blue-ff1 font-wei">123456</span>
                         </a>
                     </div>
                     <div class="g-data">
                         <a class="malign-center" href="javascript:void(0)">
                             <i class="co-orange-b5a">官</i>
-                            <span class="co-orange-b5a">123456</span>
+                            <span class="co-orange-b5a font-wei">123456</span>
                         </a>
                     </div>
                 </div>
@@ -347,6 +347,7 @@
     <!-- 三方JS -->
     <script src="config/index.js"></script>                     <!-- 配置 -->
     <script src="utils/jquery/jquery.min.js"></script>          <!-- jQuery -->
+    <script src="https://cdn.bootcss.com/echarts/4.0.4/echarts.min.js"></script><!-- echarts4.0.4引入 -->
     <script src="utils/countUp/countUp.min.js"></script>        <!-- 数字渐增动画 -->
     <script src="utils/pace/pace.min.js"></script>              <!-- 加载进度 -->
 
