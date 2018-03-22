@@ -84,29 +84,29 @@ html,body{
     width: 25%;
     height: 100%;
 }
-.c-headcont {
-    -webkit-transform: translateY(50%);
-    -moz-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    -o-transform: translateY(50%);
-    transform: translateY(50%);
-}
-.c-headcont > a {
-    padding-left: 10%;
-    border-left: 4px solid #fff;
-    cursor: pointer;
-}
-.c-headcont > a.active {
-    color: #01fff1;
-}
+/*.c-headcont {*/
+    /*-webkit-transform: translateY(50%);*/
+    /*-moz-transform: translateY(50%);*/
+    /*-ms-transform: translateY(50%);*/
+    /*-o-transform: translateY(50%);*/
+    /*transform: translateY(50%);*/
+/*}*/
+/*.c-headcont > a {*/
+    /*padding-left: 10%;*/
+    /*border-left: 4px solid #fff;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.c-headcont > a.active {*/
+    /*color: #01fff1;*/
+/*}*/
 .c-hc-write1 {
     margin-right: 5%;
 }
 /*渠道分析内容切换内容*/
 .c-cutcontent {
     position: relative;
-    margin-top: 7%;
-    height: 93%;
+    /*margin-top: 7%;*/
+    height: 100%;
 }
 /*渠道分析内容*/
 .tren-cont {
@@ -178,6 +178,7 @@ html,body{
 }
 /*图表*/
 .use-listbox {
+    position: relative;
     display:  flex;
     justify-content: space-between;
     text-align: center;
@@ -185,6 +186,19 @@ html,body{
 .use-listbox > div {
     width: 25%;
 }
+/*支付宝|微信|12123|官网*/
+.use-listbox > .use-listwrite {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+.use-listwrite > a {
+    display: flex;
+    justify-content: space-between;
+}
+.use-listwrite > a > span {
+     width: 25%;
+ }
 /*各渠道新增用户数量*/
 .trench-user-box {
     width: 100%;
@@ -194,7 +208,7 @@ html,body{
 .trench-user-header {
     position: relative;
     width: 50%;
-    height: 13%;
+    height: 12%;
     background-image: url("../images/inter-leftbg.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -202,7 +216,7 @@ html,body{
 }
 .trench-user-cont {
     width: 100%;
-    height: 81%;
+    height: 87%;
 }
 /*各渠道累计办理业务占比*/
 .trench-busi-box{
@@ -228,25 +242,29 @@ html,body{
     height: 100%;
 }
 .pro-write {
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
     width: 60%;
     height: 100%;
 }
 .pro-write > li {
     position: relative;
     display: flex;
+    height: 40%;
+    align-items: center;
     justify-content: space-between;
-    height: 50%;
-}
-.pro-w-flex .icon {
-    width: 20px;
-    height: 20px;
-    fill: currentColor;
-    color: #00ff94;
-    vertical-align: middle;
 }
 .pro-w-flex p {
     display: inline;
+    padding-left: 17px;
     vertical-align: middle;
+    background-image: url("../images/zfb-pic.png");
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.pro-w-flex p.wechat-pic {
+    background-image: url("../images/wechat-pic.png");
 }
 .pro-w-flex p > span {
     color: #00ffa2;
@@ -273,6 +291,14 @@ html,body{
 }
 .pro-w-nodafult p {
     display: inline;
+    padding-left: 17px;
+    vertical-align: middle;
+    background-image: url("../images/pay-pic.png");
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.pro-w-nodafult p.auth-pic {
+    background-image: url("../images/auth-pic.png");
 }
 .pro-w-nodafult p > span {
     color: #00ffa2;
@@ -312,6 +338,7 @@ html,body{
 }
 .trench-mouth > a {
     color: #fff;
+    font-size: 18px;
 }
 .trench-mouth > a.active {
     color: #01fff1;
@@ -452,10 +479,211 @@ html,body{
 }
 /*右边交通管理&&业务情况*/
 .c-right-traf {
+    overflow: hidden;
+    position: relative;
     width: 25%;
     height: 100%;
-    border: 1px solid black;
-    box-sizing: border-box;
+}
+/*!*交通管理&&业务情况切换标题*!*/
+/*.c-r-headcont{*/
+    /*-webkit-transform: translateY(50%);*/
+    /*-moz-transform: translateY(50%);*/
+    /*-ms-transform: translateY(50%);*/
+    /*-o-transform: translateY(50%);*/
+    /*transform: translateY(50%);*/
+/*}*/
+/*.c-r-headcont > a{*/
+    /*padding-left: 10%;*/
+    /*border-left: 4px solid #fff;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.c-r-headcont > a.active{*/
+    /*color: #01fff1;*/
+/*}*/
+
+/*.c-hc-write1{*/
+    /*margin-right: 5%;*/
+/*}*/
+/*交通管理&&业务情况切换内容*/
+.c-r-cutcontent{
+    position: relative;
+    width: 100%;
+    /*margin-top: 7%;*/
+    height: 100%;
+
+}
+/*交通管理内容*/
+.traf-cont{
+    width: 100%;
+    height: 31%;
+    text-align: center;
+}
+/*全市注册驾驶人与注册车辆数量对比*/
+.rmv-box{
+    width: 50%;
+    height: 100%;
+}
+/*全市注册驾驶人与注册车辆数量对比*/
+.rmv-header{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    background-image: url("../images/inter-rightbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+/*全市注册驾驶人与注册车辆数量对比内容*/
+.rmv-cont{
+    position: relative;
+    width: 100%;
+    height: 89%;
+    margin-top: 1px;
+    border: solid 1px black;
+}
+
+/*累计用户数量与实际车辆数量对比*/
+.real-box{
+    width: 49%;
+    height: 100%;
+}
+/*累计用户数量与实际车辆数量对比*/
+.real-header{
+    position: relative;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    background-image: url("../images/inter-rightbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+
+}
+/*累计用户数量与实际车辆数量对比*/
+.real-cont{
+    width: 100%;
+    height: 89%;
+}
+/*业务情况内容*/
+.busi-cont{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    text-align: center;
+    -webkit-transition: right .3s;
+    -moz-transition: right .3s;
+    -ms-transition: right .3s;
+    -o-transition: right .3s;
+    transition: right .3s;
+
+}
+/*重点网上办理业务TOP 10*/
+.ryw-box{
+    width: 100%;
+    height: 20%;
+    margin-bottom: 1%;
+    padding-top: 3%;
+}
+.ryw-header{
+    position: relative;
+    width: 54% ;
+    height: 18%;
+    text-align: center;
+    background-image: url("../images/inter-rightbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.ryw-cont{
+    width: 100%;
+    height: 80%;
+
+}
+.echarts-styles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 50%;
+    height: 100%;
+}
+/*业务办理时段分析*/
+.rfx-box{
+    position: relative;
+    width: 100%;
+    height: 25%;
+    margin-bottom: 1%;
+}
+/*日周月均值*/
+.rfx-mouth {
+    position: absolute;
+    top: 50%;
+    right: -92%;
+    z-index: 999;
+    display: flex;
+    width: 90%;
+    text-align: right;
+    justify-content: space-between;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.rfx-mouth > a {
+    color: #fff;
+    font-size: 12px;
+}
+.rfx-mouth > a.active{
+    color: #01fff1;
+}
+.rfx-header{
+    position: relative;
+    width: 52% ;
+    height: 12%;
+    background-image: url("../images/inter-rightbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+/*业务办理时段内容*/
+.rfx-cont{
+    width: 100%;
+    height: 86%;
+}
+/*线上线下办理业务占比*/
+.rzb-box{
+    width: 100%;
+    height: 20%;
+}
+.rzb-header{
+    position: relative;
+    width: 52%;
+    height: 14%;
+    background-image: url("../images/inter-rightbg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.rzb-cont{
+    width: 100%;
+    height: 82%;
+}
+.refwrite {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 999;
+    padding-right: 10%;
+    text-align: left;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 /*中间*/
 .c-center-usernumber {
@@ -553,7 +781,7 @@ html,body{
     justify-content: space-between;
     cursor: pointer;
 }
-.number-myriad > span {
+.number-myriad > a {
     text-shadow: 0 0 10px rgba(79,91,161,.3),0 0 20px rgba(79,91,161,.6),0 0 30px #4f5ba1;
 }
     /*累计用户总数&&累计业务办理量*/
@@ -591,6 +819,83 @@ html,body{
     border-radius: 50%;
     border: 1px solid red;
 }
+.ball-rotation > img {
+    width: 100%;
+}
+/*各渠道新增用户数量--pop*/
+.new-user-popwindow {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    z-index: 9999;
+    width: 80%;
+    height: 60%;
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.new-sum-popwindow {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    z-index: 9999;
+    width: 80%;
+    height: 60%;
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+/*右边*/
+.new-car-popwindow {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    z-index: 9999;
+    width: 80%;
+    height: 60%;
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.new-hand-popwindow {
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    z-index: 9999;
+    width: 80%;
+    height: 60%;
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
 /**/
 /**
 * 公共的背景边框
@@ -604,6 +909,19 @@ html,body{
     -moz-box-shadow: inset 0 0px 40px rgba(16, 96, 228, .6);
     box-shadow: inset 0 0px 40px rgba(16, 96, 228, .6);
 }
+.public-popwindow {
+    border: 2px solid #2388ed;
+    box-sizing: border-box;
+    background-color: rgba(6, 16, 42, 0.9);
+    -webkit-box-shadow: inset 0 0px 40px rgba(16, 96, 228, .6);
+    -moz-box-shadow: inset 0 0px 40px rgba(16, 96, 228, .6);
+    box-shadow: inset 0 0px 40px rgba(16, 96, 228, .6);
+    /*-webkit-transform: translateX(140%);*/
+    /*-moz-transform: translateX(140%);*/
+    /*-ms-transform: translateX(140%);*/
+    /*-o-transform: translateX(140%);*/
+    /*transform: translateX(140%);*/
+}
 .public-list {
     position: absolute;
     top: 0;
@@ -611,6 +929,28 @@ html,body{
     z-index: 999;
     width: 100%;
     height: 100%;
+}
+.public-narrow {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+    color: #fff;
+    cursor: pointer;
+}
+.public-amp {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    z-index: 999;
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+    color: #fff;
+    cursor: pointer;
 }
 /*字体粗体*/
 .font-wei { font-weight: bold;}

@@ -346,7 +346,7 @@ ul, li, ol {list-style: none;}
   .ry-loading > .ry-icon {height: 56px;}
   .ry-loading > .ry-text {font-size: 14px;}
   .pro-write > li > a {
-    line-height: .5;
+    line-height: 1;
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -361,6 +361,9 @@ ul, li, ol {list-style: none;}
   .center-paybox svg {
     width: 30px;
     height: 30px;
+  }
+  .trench-mouth > a {
+    font-size: 12px;
   }
 }
 @media screen and (max-width: 1300px) {
